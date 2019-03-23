@@ -13,11 +13,16 @@ t = Time Involved in years, 0.5 years is calculated as 6 months, etc.
 n = number of compounding periods per unit t; at the END of each period
 """
 
-principal_amount = 1000
-n = 12
-rate = 8
-t = 12
+# principal_amount = 10000
+# rate = 3.875
+# n = 12
+# t = 7.5
+
+principal_amount = float(input("Principal : "))
+rate = float(input("Rate : "))
+n = float(input("Compound : "))
+t = float(input("Time : "))
 
 print("Calculating the compound interest ....")
 accrual = principal_amount * (1.0 + ((rate / 100) / n)) ** (n * t)
-print("The final amount after", t, "years is", accrual)
+print("The final amount after", t, "years is", round(accrual, 2))
