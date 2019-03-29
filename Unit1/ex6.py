@@ -23,6 +23,7 @@ rate = float(input("Rate : "))
 n = float(input("Compound : "))
 t = float(input("Time : "))
 
+# cal principal
 print("Calculating the compound interest ....")
 accrual = principal_amount * (1.0 + ((rate / 100) / n)) ** (n * t)
 print("The final amount after", t, "years is", round(accrual, 2))
