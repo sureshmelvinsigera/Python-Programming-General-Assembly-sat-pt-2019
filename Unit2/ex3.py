@@ -1,25 +1,6 @@
-a = 10
-b = 10
+a = 100
 
-if a == b:
-    print("a == b")
-
-elif a != b:
-    print("a != b")
-
-elif a < b:
-    print("a < b")
-
-elif a > b:
-    print("a > b")
-
-elif a <= b:
-    print("a <= b")
-
-elif a >= b:
-    print("a >= b")
-
+if a == 100:
+    print("A")
 else:
-    print("give me something to compare ...")
-
-print("executing regardless... ")
+    print("B")
