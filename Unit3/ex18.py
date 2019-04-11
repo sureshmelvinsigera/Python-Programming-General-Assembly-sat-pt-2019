@@ -17,3 +17,4 @@ class Dog(Animal):
 
 
 sophie = Dog("sophie")
+sophie.eat()
