@@ -1,11 +1,12 @@
 def read_data(file_name):
+    file = open(file_name, 'r')
     try:
-        file = open(file_name, 'r')
         for line in file:
             print(line)
-        file.close()
     except FileNotFoundError:
         print(file_name, 'is not exists')
+    finally:
+        file.close()
 
 
 if __name__ == '__main__':
