@@ -4,11 +4,13 @@ def read_data(file_name):
     counter = 1
     try:
         for line in file:
-            field = line.split(" ")
+            field = line.split(';')
             # read the data, and adding to the dictionary.
-            data['invoice' + str(counter)] = field[0]
-            data['items'] = field[1]
-            data['price'] = field[2]
+            # print(field[0], ' ', field[1], ' ', field[2])
+            data['id_' + str(counter)] = field[0]
+            data['item' + str(counter)] = field[1]
+            data['price' + str(counter)] = field[2]
+
             counter += 1
         # closing the file
         file.close()
