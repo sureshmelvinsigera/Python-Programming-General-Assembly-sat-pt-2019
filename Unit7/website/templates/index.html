@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome to the Booksite</h1>
+<a href="create/">Create book</a>
+<table width="900px">
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            Number of pages
+        </td>
+        <td>
+            Update
+        </td>
+        <td>
+            Delete
+        </td>
+    </tr>
+    {% for book in books %}
+        <tr>
+            <td>
+                {{ book.name }}
+            </td>
+            <td>
+                {{ book.pages }}
+            </td>
+            <td>
+                <a href="/update/{{ book.id }}">Edit</a>
+            </td>
+            <td>
+                <a href="/delete/{{ book.id }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
